@@ -33,4 +33,33 @@ VALUES ('William Tatcher', 45, '2000-04-23'),
 INSERT INTO specializations (species_id, vets_id) SELECT s.id, v.id FROM species s JOIN vets v ON (s.name = 'Pokemon' AND v.name = 'William Tatcher');
 INSERT INTO specializations (species_id, vets_id) SELECT s.id, v.id FROM species s JOIN vets v 
   ON ((s.name = 'Pokemon' OR s.name = 'Digimon') AND v.name = 'Stephanie Mendez');
+  
+WITH ins (date, animal, vet) 
+AS (
+  VALUES 
+  (date '2020-05-24', text 'Agumon', text 'William Tatcher'),
+  (date '2020-07-22', text 'Agumon', text 'Stephanie Mendez'),
+  (date '2021-02-02', text 'Gabumon', text 'Jack Harkness'),
+  (date '2020-01-05', text 'Pikachu', text 'Maisy Smith'),
+  (date '2020-03-08', text 'Pikachu', text 'Maisy Smith'),
+  (date '2020-05-14', text 'Pikachu', text 'Maisy Smith'),
+  (date '2021-05-04', text 'Devimon', text 'Stephanie Mendez'),
+  (date '2021-02-24', text 'Charmander', text 'Jack Harkness'),
+  (date '2019-12-21', text 'Plantmon', text 'Maisy Smith'),
+  (date '2020-08-10', text 'Plantmon', text 'William Tatcher'),
+  (date '2021-04-07', text 'Plantmon', text 'Maisy Smith'),
+  (date '2019-09-29', text 'Squirtle', text 'Stephanie Mendez'),
+  (date '2020-10-03', text 'Angemon', text 'Jack Harkness'),
+  (date '2020-11-04', text 'Angemon', text 'Jack Harkness'),
+  (date '2019-01-24', text 'Boarmon', text 'Maisy Smith'),
+  (date '2019-05-15', text 'Boarmon', text 'Maisy Smith'),
+  (date '2020-02-27', text 'Boarmon', text 'Maisy Smith'),
+  (date '2020-08-03', text 'Boarmon', text 'Maisy Smith'),
+  (date '2020-05-24', text 'Blossom', text 'Stephanie Mendez'),
+  (date '2021-01-11', text 'Blossom', text 'William Tatcher')
+) INSERT INTO visits (
+  date_of_visit, 
+  animals_id, 
+  vets_id
+) SELECT ins.date, animals.id, vets.id FROM ins JOIN animals ON ins.animal = animals.name JOIN vets ON ins.vet = vets.name;
 
