@@ -60,11 +60,11 @@ After you're finished please remove all the comments and instructions!
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [your_project_name] <a name="about-project"></a>
+# 📖 [Veterynary Clinic] <a name="about-project"></a>
 
 > Describe your project in 1 or 2 sentences.
 
-**[your_project__name]** is a...
+**[Veterynary Clinic]** is a database for a veterinary clinic made with PostgreSQL.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -75,14 +75,14 @@ After you're finished please remove all the comments and instructions!
 <details>
   <summary>Client</summary>
   <ul>
-    <li><a href="https://reactjs.org/">React.js</a></li>
+    <li><a href="#">N/A</a></li>
   </ul>
 </details>
 
 <details>
   <summary>Server</summary>
   <ul>
-    <li><a href="https://expressjs.com/">Express.js</a></li>
+    <li><a href="#">N/A</a></li>
   </ul>
 </details>
 
@@ -99,9 +99,9 @@ After you're finished please remove all the comments and instructions!
 
 > Describe between 1-3 key features of the application.
 
-- **[key_feature_1]**
-- **[key_feature_2]**
-- **[key_feature_3]**
+- **[Animals table]**
+- **[Owners table]**
+- **[Species table]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -111,7 +111,7 @@ After you're finished please remove all the comments and instructions!
 
 > Add a link to your deployed project.
 
-- [Live Demo Link](<replace-with-your-deployment-URL>)
+- [Not available](<replace-with-your-deployment-URL>)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
