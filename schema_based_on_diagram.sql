@@ -17,3 +17,8 @@ create treatments (
   name varchar(100),
 );
 
+create medical_histories_treatments (
+  medical_history_id integer references medical_histories(id),
+  treatment_id integer references treatments(id),
+  primary key (medical_history_id, treatment_id)
+);
