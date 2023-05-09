@@ -43,11 +43,10 @@ create table specializations (
   constraint fk_species foreign key (species_id) references species (id), 
   constraint fk_vets foreign key (vets_id) references vets (id)
 );
-CREATE TABLE visits (
-  date_of_visit date,
+CREATE TABLE visits ( 
   animals_id int, 
   vets_id int, 
-  CONSTRAINT visits_pk PRIMARY KEY (animals_id, vets_id), 
-  CONSTRAINT fk_animals FOREIGN KEY (animals_id) REFERENCES animals (id), 
-  CONSTRAINT fk_vets FOREIGN KEY (vets_id) REFERENCES vets (id)
+  date_of_visit date,  
+  CONSTRAINT fk_animals FOREIGN key(animals_id) REFERENCES animals(id), 
+  CONSTRAINT fk_vets FOREIGN key(vets_id) REFERENCES vets(id)
 );
