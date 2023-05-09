@@ -10,3 +10,10 @@ create medical_histories (
   patient_id integer references patients(id),
   status varchar(100)
 );
+
+create treatments (
+  id serial primary key not null,
+  type varchar(100),
+  name varchar(100),
+);
+
