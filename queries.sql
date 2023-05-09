@@ -57,3 +57,14 @@ SELECT a.name FROM animals a JOIN visits v ON a.id = v.animals_id JOIN vets ON v
 SELECT a.name AS animal, a.date_of_birth AS Birth, s.name AS Specie, o.full_name AS Owner, vet.name AS veterinary, vet.date_of_graduation AS Graduation, v.date_of_visit AS Consult_date FROM animals a JOIN species s ON a.species_id = s.id JOIN owners o ON a.owner_id = o.id JOIN visits v ON a.id = v.animals_id JOIN vets vet ON v.vets_id = vet.id ORDER BY v.date_of_visit DESC LIMIT 1;
 SELECT COUNT(*) AS unspecialized_visits FROM animals a JOIN visits v ON v.animals_id = a.id JOIN vets ON v.vets_id = vets.id LEFT JOIN specializations s ON vets.id = s.vets_id AND a.species_id = s.species_id WHERE s.vets_id IS NULL;
 SELECT s.name From species s JOIN animals a ON s.id = a.species_id JOIN visits v ON a.id = v.animals_id JOIN vets ON v.vets_id = vets.id WHERE vets.name = 'Maisy Smith' GROUP BY s.name ORDER BY COUNT(*) DESC LIMIT 1;
+
+
+explain analyze SELECT COUNT(*) FROM visits where animals_id = 4;
+
+SELECT COUNT(*) FROM visits where animals_id = 4;
+SELECT * FROM visits where vets_id = 2;
+SELECT * FROM owners where email = 'owner_18327@mail.com';
+
+EXPLAIN ANALYZE SELECT COUNT(*) FROM visits where animals_id = 4;
+EXPLAIN ANALYZE SELECT * FROM visits where vets_id = 2;
+EXPLAIN ANALYZE SELECT * FROM owners where email = 'owner_18327@mail.com';
