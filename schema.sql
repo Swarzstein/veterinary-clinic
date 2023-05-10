@@ -44,6 +44,7 @@ create table specializations (
   constraint fk_vets foreign key (vets_id) references vets (id)
 );
 CREATE TABLE visits ( 
+  id serial primary key not null,
   animals_id int, 
   vets_id int, 
   date_of_visit date,  
